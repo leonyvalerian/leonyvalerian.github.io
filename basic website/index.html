@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootsrap 1</title>
+    <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+        <!-- Popper JS -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+        <style>
+            .carousel-inner img {
+              width: 1100px;
+              height: 500px;
+            }
+            </style>
+</head>
+<body>
+
+    <div class="container border text-center bg-success">
+          <h1>Belajar Bootstrap </h1>
+          <h4>By Valerian</h4>      
+    </div>
+    
+    <div class="container border bg-dark">
+        <div class="container">
+            <div class="btn-group">
+                <button type="button" class="btn btn-dark dropdown-toggle" data-toggle="dropdown">
+                    Teams
+                </button>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="#">Starter</a>
+                  <a class="dropdown-item" href="#">Substitution</a>
+                  <a class="dropdown-item" href="#">Draft</a>
+                </div>
+              </div>
+            
+              <div class="btn-group">
+                <button type="button" class="btn btn-dark dropdown-toggle" data-toggle="dropdown">
+                    League
+                </button>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="#">Schedule</a>
+                  <a class="dropdown-item" href="#">Highlight</a>
+                  <a class="dropdown-item" href="#">Press Release</a>
+                </div>
+              </div>
+            
+              <div class="btn-group">
+                <button type="button" class="btn btn-dark dropdown-toggle" data-toggle="dropdown">
+                    News
+                </button>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="#">Draft 2020</a>
+                  <a class="dropdown-item" href="#">Shop</a>
+                  <a class="dropdown-item" href="#">Events</a>
+                </div>
+              </div>
+
+            </div>
+    </div>
+    
+    <div class="container border">
+        <div id="demo" class="carousel slide" data-ride="carousel">
+
+            <!-- Indicators -->
+            <ul class="carousel-indicators">
+              <li data-target="#demo" data-slide-to="0" class="active"></li>
+              <li data-target="#demo" data-slide-to="1"></li>
+              <li data-target="#demo" data-slide-to="2"></li>
+            </ul>
+            
+            <!-- The slideshow -->
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="logo.jpg" alt="Logo" width="1100" height="500">
+              </div>
+              <div class="carousel-item">
+                <img src="team.jpg" alt="Player" width="1100" height="500">
+              </div>
+              <div class="carousel-item">
+                <img src="ticket.jpg" alt="ticket" width="1100" height="500">
+              </div>
+            </div>
+            
+            <!-- Left and right controls -->
+            <a class="carousel-control-prev" href="#demo" data-slide="prev">
+              <span class="carousel-control-prev-icon"></span>
+            </a>
+            <a class="carousel-control-next" href="#demo" data-slide="next">
+              <span class="carousel-control-next-icon"></span>
+            </a>
+          </div>
+    </div>
+
+    <div class="container text-center" style="margin-top:30px ">
+        <div class="row" style="margin-bottom:30px">
+            <div class="col-md-4">
+                <img class="img-fluid" src="curry.jpg" alt="Curry" width="460" height="345"> 
+                Stephen Curry
+            </div>
+
+            <div class="col-md-4">
+                <img class="img-fluid" src="Thopmson.jpg" alt="Thompson" width="460" height="345"> 
+                Klay Thomspson
+            </div>
+
+            <div class="col-md-4">
+                <img class="img-fluid" src="Durrant.jpg" alt="Durrant" width="460" height="345"> 
+                Kevin Durrant
+            </div>
+
+          </div>
+    </div>
+
+    <div class="container bg-secondary text-center text-white" style="margin-bottom:0">
+        <p>Created By Valerian</p>
+        <p>1982010@unai.edu</p>
+      </div>
+    
+</body>
+</html>
