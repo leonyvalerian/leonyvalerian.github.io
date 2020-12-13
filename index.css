@@ -1,3 +1,37 @@
 #ig{
     margin: 20px;
 }
+
+#mid{
+    position: absolute;
+  top: 8px;
+  right: 16px;
+  font-size: 18px;
+}
+
+#tentang{
+    position: absolute;
+  top: 1300px;
+  left: 30px;
+}
+
+#left{
+    font-size:100px;
+}
+
+#news{
+    position: absolute;
+  top: 2100px;
+  left: 800px;
+}
+
+#batik{
+    position: absolute;
+    top: 2900px;
+    right: 0px;
+}
+
+#profil{
+    position: relative;
+    left: 400px;
+}
