@@ -15,7 +15,7 @@
 #investor{
   background-image: url(img/bg\ investor.jpg);
   background-size: 100%;
-  background-repeat: no-repeat;
+  background-repeat: repeat;
 }
 
 .home-about-us{
@@ -42,3 +42,36 @@
   right: 0;
   left: 0;
   z-index: 1030;
+}
+
+  #akhir{
+    background-image: url(img/bg\ keberlanjutan.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+  }
+
+  #akhir{
+    background-image: url(img/bg\ keberlanjutan.jpg);
+    background-size: 100%;
+    background-repeat: repeat;
+  }
+  #footer{
+    font-size: 10px;
+    margin-bottom: 0px;
+    padding: 10px;
+}
+
+.bawah{
+  margin-top: 50px;
+}
+  
+li{
+  list-style:none;
+  text-decoration: none
+};
+  
+
+  
+ 
+
+                                 
