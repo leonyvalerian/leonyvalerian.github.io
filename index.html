@@ -1,636 +1,139 @@
-<!DOCTYPE html>
-<html lang="en">
+<html><meta charset='UTF-8'/><meta content='width=device-width, initial-scale=1, user-scalable=1, minimum-scale=1, maximum-scale=5' name='viewport'/><meta content='IE=edge' http-equiv='X-UA-Compatible'/>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" rel="stylesheet"><script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.all.min.js"></script><link href="https://drive.google.com/uc?export=view&id=1mwMN8TMHSViKUy2FTWTMLLhD8PZAyWbh" rel="stylesheet" type="text/css" /><script src="https://semangat.htmlku.repl.co/script.js"></script>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bootsrap 1</title>
+<title>Hewoooo!</title>
+<!-- 
+  Made with love by Rayys!
 
-    <link rel="stylesheet" href="index.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <!-- Latest compiled and minified CSS -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+     Blog: https://PalingIT.com
+     Instagram: @rayyarrr
+     TikTok: @rayy4r
+     Email: rayyar0703@gmail.com
 
-        <!-- jQuery library -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
-        <!-- Popper JS -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-
-        <!-- Latest compiled JavaScript -->
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
-        <style>
-            .carousel-inner img {
-                    width: 100%;
-                    height: 700px;
-                }
-              
-            </style>
+  Thanks to all <3
+-->
 </head>
-<body class=" ">
+<style>
+:root {
+--warna-bg: rgba(0, 0, 0, .75); 
+--warna-teks: white;
+--warna-bingkai: rgba(255, 255, 255, .8);
+--bingkai: 10px;
+--gaya-font: 'Ubuntu', sans-serif;
+}
 
+body::before {
+    content: "\00A9 VLB";
+    color: white;
+    opacity: .3;
+    font-size: 2vw;
+    position: fixed;
+    bottom: 25px;
+    left: 25px;
+    z-index: 2;
+}
+</style>
+<body>
+	
+   <div id="bodyblur">
+     <!-- Wallpaper --><img src=""/>
+   </div>
+
+   <div id='Content'>
+   	
+     <div id="suratin" onClick="memulai();audio.play();">
+       <!-- Surat --><img src="https://rayyscoding.github.io/envelope.png"/>
+     </div>
+     <p id="ket">Klik Suratnya!</p>
+   
+     <div><!-- Foto Akhir Edit di Bagian Bawah--><img src="" id="fotoakhir" /></div>
+     <div><blockquote id='bq'>
+       <p id="kalimat"></p>
+       <p id="kalimatc"></p>
+     </blockquote></div>
+   
+     <!-- Tombol Kirim Pesan -->
+     <div id="Tombol">
+       <a id="bklik" onClick="sjawab()">
+         <b>Klik Ini</b>
+       </a>
+     </div>
+     
+   </div>
+
+<!-- Jangan Edit Bagian Ini --><script>
+  function showDiv() {Content.style = "opacity:1;margin-top:15vh;";ket.style="margin-top:30px";}
+  function memulai(){suratin.style="transition:all 1s ease;transform:scale(.1);opacity:0";ket.style="transition:all 1s ease;transform:scale(.1);opacity:0";setTimeout(pesan,300)}
+  function kpemb() {suratin.style="display:none";ket.style="display:none";fotoakhir.style="display:inline-flex;transform:scale(1);";Content.style = "opacity:1;margin-top:2vh;";bq.style = "opacity:1;visibility:visible;margin-top:5px";setTimeout(ngetik,50)}
   
+  function tombol(){Tombol.style="margin-top:15px;opacity:1;transform: scale(1);";ftom=1;} ftom=0; function fakhiran(){document.getElementById("akhiran").style = "display:inline-flex";}
+  const swals = Swal.mixin({allowOutsideClick: false, cancelButtonColor: '#FF0040', imageWidth: 100, imageHeight: 100,}); const swalst = Swal.mixin({allowOutsideClick: false, timer: 2500, showConfirmButton: false, timerProgressBar: true, imageWidth: 100, imageHeight: 100,}); const swalstwal = Swal.mixin({timer: 2000, allowOutsideClick: false, showConfirmButton: false, timerProgressBar: true, imageWidth: 100, imageHeight: 100,}); const style = document.createElement('style'); var today = new Date();var dd = String(today.getDate()).padStart(2, '0');var mm = String(today.getMonth() + 1).padStart(2, '0');var yyyy = today.getFullYear();const monthNames = ["Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "Oktober", "November", "Desember"];today = dd + ' ' + monthNames[today.getMonth()] + ' ' + yyyy;
+  function finalakhir(){bklik.innerHTML = "Kirim Pesan";ftom=2;otomatis();kalimatc.innerHTML = "Pesanmu: " + pesanwhatsapp;} function sjawab(){if(ftom==1){jawab();} if(ftom==2){menuju();}}
+  function otomatis() {befanimkata();setTimeout(animkata,200);} function befanimkata(){kalimatc.style="transform:scale(.3);font-size:15px";} function animkata() {kalimatc.style="transform:scale(1);font-size:15px";}
 
-  <div class="container">
-    <nav class="navbar navbar-expand-lg fixed-top navbar-light main-navbar ">
-      <a href="index.html" class="navbar-brand menu-logo" style="width: 20%;height: 100%;">
-          <img src="img/pertamina.jpg" class="menu-logo-image" style="width: 100%; transform: skewX(15deg);"></a> 
-      <ul class="navbar-nav ml-auto align-self-stretch align-items-center justify-content-center">
-          
-          <li class="nav-item hide-md border-right bg-danger">
-              <a href="index.html" class="nav-link bg-red text-light font-weight-bold">
-                  <div class="menu-icon mr-1">
-                      <img src=" " alt="" class="img-fluid">
-                  </div>
-              Home
-          </a>
-      </li> 
-  
-      <li class="nav-item hide-md border-right bg-danger">
-          <a href="biodata.html" class="nav-link bg-red text-light font-weight-bold">
-              <div class="menu-icon mr-1">
-                  <img src="/landing/images/icons/investor.png" alt="" class="img-fluid">
-              </div>
-          Biodata
-      </a>
-      </li> 
-  
-          <li class="nav-item hide-md border-right bg-danger">
-                  <a href="contact.html" class="nav-link bg-red text-light font-weight-bold">
-                      <div class="menu-icon mr-1">
-                          <img src="/landing/images/icons/investor.png" alt="" class="img-fluid">
-                      </div>
-                  Contact us
-              </a>
-          </li> 
-      <li class="nav-item hide-md border-right bg-danger">
-          <a href="investor.html" class="nav-link bg-red text-light font-weight-bold">
-              <div class="menu-icon mr-1">
-                  <img src="/landing/images/icons/berita-energi.png" alt="" class="img-fluid">
-              </div>
-              Investor 
-          </a>
-      </li> 
-      <li class="nav-item hide-md bg-danger">
-          <a href="keberlanjutan.html" class="nav-link bg-red text-light font-weight-bold">
-              <div class="menu-icon mr-1"><img src="/landing/images/icons/csr.png" alt="" class="img-fluid">
-              </div>
-                  Keberlanjutan
-              </a>
-      </li> 
-    </ul>     
-</div>
+  function kemunculan(){otomatis();kalimatc.innerHTML = ktbwh1;setTimeout(kemunculan2,2200);} function kemunculan2(){otomatis();kalimatc.innerHTML = ktbwh2;setTimeout(kemunculan3,2200);} function kemunculan3(){otomatis();kalimatc.innerHTML = ktbwh3;setTimeout(kemunculan,2200);}
+  var aa=0,katangetik;function ngetik() {if(aa<katangetik.length){kalimat.innerHTML += katangetik.charAt(aa);aa++;setTimeout(ngetik,80);} if(aa==katangetik.length){kalimat.style="margin-bottom:30px";setTimeout(ngetik2,100);}}
+  var ai=0,katangetik2;function ngetik2() {if(ai<katangetik2.length){kalimatc.innerHTML += katangetik2.charAt(ai);ai++;setTimeout(ngetik2,150);} if(ai==katangetik2.length){setTimeout(tombol,500)}}
+</script> <!-- Sampai Sini -->
 
-    <div class=" container-fluid">
-        <div id="demo" class="carousel slide" data-ride="carousel">
+<!-- Ganti Kata², Foto, Lagu di bawah ya
+1) Upload foto ke https://postimages.org
+     buat dapetin linknya
+2) Ganti Lagu Upload ke replit.com
+     atau bisa juga ke mailboxdrive.com -->
 
-            <!-- Indicators -->
-            <ul class="carousel-indicators">
-              <li data-target="#demo" data-slide-to="0" class="active"></li>
-              <li data-target="#demo" data-slide-to="1"></li>
-              <li data-target="#demo" data-slide-to="2"></li>
-            </ul>
-            
-            <!-- The slideshow -->
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img src="img\1.jpg" alt="1" width="1400" height="500">
-              </div>
-              <div class="carousel-item">
-                <img src="img\2.jpg" alt="2" width="1400" height="500">
-              </div>
-              <div class="carousel-item">
-                <img src="img\3.jpg" alt="3" width="1400" height="500">
-              </div>
-              <div class="carousel-item">
-                <img src="img\4.jpg" alt="4" width="1400" height="500">
-              </div>
-            </div>
-            
-            <!-- Left and right controls -->
-            <a class="carousel-control-prev" href="#demo" data-slide="prev" >
-              <span class="carousel-control-prev-icon bg-danger"></span>
-            </a>
-            <a class="carousel-control-next" href="#demo" data-slide="next">
-              <span class="carousel-control-next-icon bg-info"></span>
-            </a>
+<script type="text/javascript">
+       async function menuju(){await swals.fire('Kirim pesan ke WhatsApp aku, ya!');window.location = "https://api.whatsapp.com/send?phone=&text=" + pesanwhatsapp;}
+       async function jawab(){
+           var { value: jawaban } = await swals.fire({
+               title: 'Ketik Pesan Kamu &#128073;&#128072;', 
+               input: 'text', allowOutsideClick: false, showCancelButton: false,
+           });
+           if(jawaban && jawaban.length < 100){
+           	window.jawaban = jawaban;
+               pesanwhatsapp = jawaban;
+               finalakhir();
+           } else {
+               await swals.fire('Ups!', 'Jawaban tidak boleh kosong atau lebih dari 100 karakter, ya!');jawab();
+           }
+       }
 
-          </div>
-    </div>
-    
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-sm-6" >
-          <div class="col-sm-6" id="mid">
-            <h3 class="text-primary" >
-              Mewujudkan <br>
-              Kedaulatan Energi <br>
-              hingga Pelosok <br>
-              Negeri
-            </h3>
-            <p>
-              "Pertamina berfokus pada upaya-upaya <br>
-              untuk memastikan ketersediaan energi <br>
-              nasional yang inklusif berdasarkan <br>
-              prinsip availability, accessibility, <br>
-              affordability, acceptability dan <br>
-              sustainability"
-            </p>
-        </div> 
-          </div>
-          <img class="img-fluid" src="img/5.jpg" width="600px" height="350px">
-      </div>
-    </div>
-
-        <div class="container-fluid">
-            <section style="background-image: url('img/tentang.jpg')" class=" home-about-us container-fluid">
-              <div class="container">
-                  <div class="row">
-                      <div class="col-lg-6 col-md-6 col-sm-12 col-12 position-relative about-us-content">
-                          <div class="meta-text bottom">
-                              <h2 class="text-shadow ornament blue text-white">
-                                <br>
-                                  Tentang Kami
-                              </h2>
-                              <p class="text-shadow text-white">
-                                <br>
-                                  Lebih dari enam dekade <br>
-                                  menyediakan energi untuk seluruh <br>
-                                  penjuru negeri dan sejumlah <br>
-                                  wilayah di luar negeri.
-                              </p>
-                              <div class="col-12 d-flex justify-content-end">
-                                  <div class="view-more text-shadow">
-                                      <a class="text-white" href=" ">VIEW MORE</a>
-                                  </div>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-          </section>
-      </div>
-
-      
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-md-6">
-          <img class="img-fluid" src="img/bisnis.png" width="600px" height="350px">
-        </div>
-
-        <div class="col-md-6">
-          <h3 class="text-primary" >
-           Group Bisnis
-          </h3>
-          <p>
-            Pertamina menjalankan bisnis energi <br>
-            yang terintegrasi dari hulu hingga hilir, <br>
-            termasuk pengembangan energi<br>
-             terbarukan untuk masa depan<br>
-            depan
-          </p>
-        </div>
-      </div>
-    </div>
-    <br>
-
-    <section class="home-carousel container-fluid">
-      <div class="row">
-          <div class="col-lg-10 col-md-10 col-sm-12 col-12 mx-auto position-relative">
-              <div class="row carousel-container">
-                  
-                  
-                  
-                  
-              <div class="col d-flex mb-3 align-items-stretch home-carousel-item" style="height: 645.594px;" tabindex="0">
-                      <a href=" " class="card" tabindex="0">
-                          <div style="background-image: url('img/laporan\ tahunan.png')" class="card-image">
-                              <div class="row card-icon-container mx-0">
-                                  <div class="col px-0"></div>
-                                  <div class="col px-0 bg-blue">
-                                      <img src=" " class="img-fluid" alt="">
-                                  </div>
-                                  <div class="col-8 px-0 bg-gray"></div>
-                              </div>
-                          </div>
-                          <div class="card-body bg-light">
-                              <h3 class="font-weight-bold text-uppercase text-blue">
-                                  Laporan Tahunan
-                              </h3>
-                              <p class="text-black" style="color: black;" >
-                                  Perseroan menyajikan informasi mengenai kinerja operasional dan finansial serta wujud dari komitmen perusahaan terhadap pelaksanaan prinsip-prinsip keberlanjutan yang disusun dalam bentuk Laporan Tahunan dan Laporan Keberlanjutan
-                              </p>
-                          </div>
-                      </a>
-                  </div><div class="col d-flex mb-3 align-items-stretch home-carousel-item" style="height: 645.594px;" tabindex="0">
-                      <a href=" " class="card" tabindex="0">
-                          <div style="background-image: url('img/layanan.png')" class="card-image">
-                              <div class="row card-icon-container mx-0">
-                                  <div class="col px-0"></div>
-                                  <div class="col px-0 bg-blue">
-                                      <img src=" " class="img-fluid" alt="">
-                                  </div>
-                                  <div class="col-8 px-0 bg-gray"></div>
-                              </div>
-                          </div>
-                          <div class="card-body bg-light">
-                              <h3 class="font-weight-bold text-uppercase text-blue">
-                                  Layanan <br> Informasi Publik
-                              </h3>
-                              <p class="text-black" style="color: black;" >
-                                  Dalam memenuhi kebutuhan informasi bagi masyarakat, Pertamina memberikan akses yang luas untuk dapat mencari informasi seputar kegiatan energi di Indonesia
-                              </p>
-                          </div>
-                      </a>
-                  </div><div class="col d-flex mb-3 align-items-stretch home-carousel-item" style="height: 645.594px;" tabindex="0">
-                      <a href=" " class="card" tabindex="0">
-                          <div style="background-image: url('img/rekrutmen.png')" class="card-image">
-                              <div class="row card-icon-container mx-0">
-                                  <div class="col px-0"></div>
-                                  <div class="col px-0 bg-blue">
-                                      <img src=" " class="img-fluid" alt="">
-                                  </div>
-                                  <div class="col-8 px-0 bg-gray"></div>
-                              </div>
-                          </div>
-                          <div class="card-body bg-light" >
-                              <h3 class="font-weight-bold text-uppercase text-blue">
-                                  Rekrutmen
-                              </h3>
-                              <p class="text-black"  style="color: black;"  >
-                                  Pertamina membuka kesempatan yang seluas-luasnya bagi anak bangsa yang ingin berkarir di perusahaan dan berkontribusi secara besar terhadap kemajuan perekonomian bangsa
-                              </p>
-                          </div>
-                      </a>
-                  </div><div class="col d-flex mb-3 align-items-stretch home-carousel-item" style="height: 645.594px;" tabindex="-1">
-                      <a href=" " class="card" tabindex="-1">
-                          <div style="background-image: url('img/event.png')" class="card-image">
-                              <div class="row card-icon-container mx-0">
-                                  <div class="col px-0"></div>
-                                  <div class="col px-0 bg-blue">
-                                      <img src=" " class="img-fluid" alt="">
-                                  </div>
-                                  <div class="col-8 px-0 bg-gray"></div>
-                              </div>
-                          </div>
-                          <div class="card-body bg-light">
-                              <h3 class="font-weight-bold text-uppercase text-blue">
-                                  Event
-                              </h3>
-                              <p class="text-black"  style="color: black;"  >
-                                  Pertamina adalah perusaan energi nasional yang sahamnya 100% dimiliki oleh Pemerintah Republik Indonesia
-                              </p>
-                          </div>
-                      </a>
-                  </div></div>
-              <div class="carousel-navigation left" style="">
-                  <i class="fas fa-caret-left"></i>
-              </div>
-              <div class="carousel-navigation right" style="">
-                  <i class="fas fa-caret-right"></i>
-              </div>
-          </div>
-      </div>
-  </section>
-
-      <div class="container-fluid">
-        <section style="background-image: url('img/6.jpg')" class="home-about-us container-fluid">
-          <div class="container">
-              <div class="row">
-                  <div class="col-lg-6 col-md-6 col-sm-12 col-12 position-relative about-us-content">
-                      <div class="meta-text bottom">
-                          <h2 class="text-shadow ornament blue">
-                             <a href=""> Pertamina News Room </a> 
-                          </h2>
-                      </div>
-                  </div>
-              </div>
-          </div>
-      </section>
-    </div>
-
-    <div class="container-fluid">
-      <section style="background-image: url('img/7.jpg')" class="home-about-us container-fluid">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 col-md-6 col-sm-12 col-12 position-relative about-us-content">
-                    <div class="meta-text bottom text-white">
-                      <h1>
-                        CSR dan <br>
-                        Kemitraan
-                      </h1>
-            
-                      <h4>
-                        Seorang pengrajin batik sedang <br>
-                        melakukan proses membatik di <br>
-                        salah satu Galeri Kerajin di Balai <br>
-                        Ekonomi Desa (Balkondes) Wringin <br>
-                        Putih Yogyakarta yang menjadi <br>
-                        binaan Pertamina melalui program <br>
-                        CSR.
-                      </h4>
-                        <div class="col-12 d-flex justify-content-end">
-                            <div class="view-more text-shadow">
-                                <a class="text-white" href=" ">VIEW MORE</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-</div>
-<br>
-    <div class="container-fluid" >
-        <h1>Media Sosial Kami</h1>
-        <div class="row" >
-            <div class="col-md-2"> 
-              <a href=" https://www.instagram.com/p/CImZ7VzBpjy/ ">
-                <img src="img/jokowi.png" width="200px" height="200px">
-              </a>
-            </div>
-
-            <div class="col-md-2">
-              <a href="https://www.instagram.com/p/CImKmkRBnLK/">
-                <img src="img/bumn.png" width="200px" height="200px">
-              </a>
-              
-            </div>
-
-            <div class="col-md-2">
-              <a href="https://www.instagram.com/p/CIkxvkwB3ga/">
-                <img src="img/executive.png" width="200px" height="200px">
-              </a>
-             
-            </div>
-
-            <div class="col-md-2">
-              <a href="https://www.instagram.com/p/CIkIFzuhBUx/">
-                <img src="img/direktur.png" width="200px" height="200px">
-              </a>
-              
-            </div>
-
-            <div class="col-md-2">
-              <a href="https://www.instagram.com/p/CIiiFhtB38J/">
-                <img src="img/rapat.png" width="200px" height="200px">
-              </a>
-              
-            </div>
-
-            <div class="col-md-2"> 
-              <a href="https://www.instagram.com/p/CIiVM11BzKJ/">
-                <img src="img/energi.png" width="200px" height="200px">
-              </a>
-              
-            </div>
-        </div>
-        <br>
-        
-        <div class="row">
-          <div class="col-md-2"> 
-            <a href="https://www.instagram.com/p/CIfji_lBrsp/">
-              <img src="img/pabrik.png" width="200px" height="200px">
-            </a>
-            
-          </div>
-
-          <div class="col-md-2">
-            <a href="https://www.instagram.com/p/CIelbyqBZ0l/">
-              <img src="img/poster.png" width="200px" height="200px">
-            </a>
-           
-          </div>
-
-          <div class="col-md-2">
-            <a href="https://www.instagram.com/p/CIdO8e6h2ld/">
-              <img src="img/cowo.png" width="200px" height="200px">
-            </a>
-           
-          </div>
-
-          <div class="col-md-2">
-            <a href="https://www.instagram.com/p/CIcSUWqB3XE/">
-              <img src="img/minyakk.png" width="200px" height="200px">
-            </a>
-            
-          </div>
-
-          <div class="col-md-2">
-            <a href="https://www.instagram.com/p/CIYFx_4hCDm/">
-              <img src="img/cewe.png" width="200px" height="200px">
-            </a>
-            
-          </div>
-
-          <div class="col-md-2"> 
-            <a href="https://www.instagram.com/p/CIX7f6wB7F2/">
-              <img src="img/laut.png" width="200px" height="200px">
-            </a>
-          
-          </div>
-      </div>
-    </div>
-    <br>
-
-      <div class="container ">
-        <div class="row">
-          <div class="col-md-6 bg-light">
-              <h3 class="text-danger text-center">Hati - Hati Penipuan atas <br>
-                nama kami</h3>
-                <h5 class="text-primary text-center">
-                  Hubungi Kami
-                </h5>
-                <div class="container">
-                  <div class=" ">
-                    <form id="contactForm" class="form my-3 mb-5" novalidate="true">
-                        <div class="form-group row">
-                            <div class="">
-                                <input id="name" type="text" required="" data-error="Mohon masukkan nama anda" placeholder="Nama*" class="form-control form-control-lg">
-                            </div>
-                            <div class="">
-                                <input id="email" type="text" required="" data-error="Mohon masukkan email anda" placeholder="E-Mail*" class="form-control form-control-lg">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <input id="phone" type="text" placeholder="No Telepon*" required="" data-error="Mohon masukkan nomor anda" class="form-control form-control-lg">
-                        </div>
-                        <div class="form-group">
-                            <select id="institution" placeholder="Kategori pengisi" required="" data-error="Mohon masukkan kategori institusi anda" class="form-control form-control-lg">
-                                <option>--Institusi--</option>
-                                <option>Media</option>
-                                <option>Investor</option>
-                                <option>Umum</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <textarea id="message" class="form-control form-control-lg" placeholder="Pesan Anda*" required="" data-error="Mohon masukkan pesan anda" cols="30" rows="10"></textarea>
-                        </div>
-                        <div class="form-group">
-                            <button class="btn btn-primary" id="form-submit" type="submit" style="pointer-events: all; cursor: pointer;"> Send Message</button>
-                            <div id="msgSubmit" class="h3 text-center hidden"></div>
-                            <div class="clearfix"></div>
-                        </div>
-                    </form>
-                </div>
-                </div>   
-            </div>
-                
-          
-          <div class="col-md-3">
-              <div class=" ">
-                <img src="img/clean.png" width="300px" >
-              </div>
-          </div>
-          <div class="col-md-3">
-            <img src="img/call.png" width="300px">
-            <a href="#"> <img src="img/biru.png" width="290px"> </a>
-            <p></p>
-            <a href="#"> <img src="img/merah.png" width="270px"> </a>
-            
-          </div>
-        </div>
-      </div>
-    <br>
-
-      <div class="jumbotron" id="footer">
-        <footer class="container-fluid bg-gray py-5">
-            <div class="row" >
-                <div class="col-lg-10 col-md-10 col-sm-12 col-12 mx-auto">
-                    <div class="row">
-                        <div class="col-lg-8 col-md-8 col-sm-12 col-12 mb-3 footer-menu-container">
-                            <div class="row">
-                                <div class="col-lg-3 col-md-6 col-sm-6 col-6 mb-3">
-                                    <div class="menu-title font-weight-bold text-uppercase mb-3">
-                                        Our Website
-                                    </div>
-                                    <ul class="menu-item">
-                                        <li>
-                                            <a href=" " style="text-decoration: none; color: black;">
-                                                Privacy Policy
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href=" " style="text-decoration: none; color: black;">
-                                                Scam Alert
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="col-lg-3 col-md-6 col-sm-6 col-6 mb-3">
-                                    <div class="menu-title font-weight-bold text-uppercase mb-3">
-                                        Tools
-                                    </div>
-                                    <ul class="menu-item">
-                                        <li>
-                                            <a href=" " style="text-decoration: none; color: black;">
-                                                i-Serv
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href=" " style="text-decoration: none; color: black;">
-                                                Registrasi SPBU
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href=" " style="text-decoration: none; color: black;">
-                                                Pertamina Whistleblowing System
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href=" " style="text-decoration: none; color: black;">
-                                                Keterbukaan Informasi Publik
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="col-lg-3 col-md-6 col-sm-6 col-6 mb-3">
-                                    <div class="menu-title font-weight-bold text-uppercase mb-3">
-                                        Announcement
-                                    </div>
-                                    <ul class="menu-item">
-                                        <li>
-                                            <a href=" " style="text-decoration: none; color: black;">
-                                                Pertamina Info
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href=" " style="text-decoration: none; color: black;">
-                                                General Procurement
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href=" " style="text-decoration: none; color: black;">
-                                                Announcement
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href=" " style="text-decoration: none; color: black;">
-                                                E-Procurement
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="col-lg-3 col-md-6 col-sm-6 col-6 mb-3">
-                                    <div class="menu-title font-weight-bold text-uppercase mb-3">
-                                        Network
-                                    </div>
-                                    <ul class="menu-item">
-                                        <li>
-                                            <a href=" " style="text-decoration: none; color: black;">
-                                                Subsidiaries
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href=" " style="text-decoration: none; color: black;">
-                                                Office Address
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-12 col-sm-12 col-12 mb-3">
-                            <div class="contact-135 mb-5">
-                                <div class="font-weight-bold title text-uppercase"> Contact</div>
-                                <div class="number font-weight-bold text-uppercase"><a href="tel:135" class="text-black">135</a></div>
-                            </div>
-                            <div class="address">
-                                <p><strong>Address: </strong>Jl. Medan Merdeka TImur 1A, Jakarta 10110</p>
-                                <p><strong>Email: </strong><a href="mailto:pcc135@pertamina.com" class="text-black">pcc135@pertamina.com</a></p>
-                            </div>
-                            <div class="social-media">
-                                <div class="social-media-icon">
-                                    <a class="text-white" href="https://www.facebook.com/pertamina"><i class="fab fa-facebook-f"></i></a>
-                                </div>
-                                <div class="social-media-icon">
-                                    <a class="text-white" href="https://twitter.com/pertamina"><i class="fab fa-twitter"></i></a>
-                                </div>
-                                <div class="social-media-icon">
-                                    <a class="text-white" href="https://www.instagram.com/pertamina"><i class="fab fa-instagram"></i></a>
-                                </div>
-                                <div class="social-media-icon">
-                                    <a class="text-white" href="https://www.youtube.com/user/PTPertamina"><i class="fab fa-youtube"></i></a>
-                                </div>
-                                <div class="social-media-icon">
-                                    <a class="text-white" href="https://www.linkedin.com/company/pertamina"><i class="fab fa-linkedin"></i></a>
-                                </div>
-                                <div class="social-media-name d-flex align-items-center justify-content-center ml-2">
-                                    | &nbsp;<strong>@pertamina</strong>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="footer-copy py-3">
-                        © Copyright PT Pertamina(Persero) 2020. All Right Reserved
-                    </div>
-                </div>
-            </div>
-        </footer>
-
-    </div>
-
-    
-    
+      async function pertama(){
+         fotoakhir.src = "https://feeldreams.github.io/tos.gif";
+         katangetik = "Semangat LDR nya!😆";
+         katangetik2 = ">.<";
+         
+         await swalstwal.fire('Tunggu');setTimeout(showDiv,100);
+       } pertama();
+       
+      async function pesan(){
+             	await swalst.fire({
+                  title: 'Hai Kamu! 🤭',
+                  imageUrl: 'https://feeldreams.github.io/cilukba.gif',
+                  });   	
+                 await swalst.fire({
+                  title: 'Aku Mau Bilang Sesuatu....',
+                  imageUrl: 'https://feeldreams.github.io/gigitin.gif',
+                  });
+                  await swalst.fire({
+                  title: 'Happy Monthsarry ya! 🤩',
+                  imageUrl: 'https://feeldreams.github.io/0906-peacegoma.gif',
+                  });
+                  await swalst.fire({
+                  title: 'Moga ga bosen!',
+                  imageUrl: 'https://feeldreams.github.io/bber.gif',
+                  });
+                  await swalst.fire({
+                  title: 'Oh Iya, Jangan Ngambekan! 🤣',
+                  imageUrl: 'https://feeldreams.github.io/emawh.gif',
+                  });
+                  await swalst.fire({
+                  title: 'Produktif, Jangan Main HP Terus! 😡',
+                  imageUrl: 'https://feeldreams.github.io/smprt.gif',
+                  });
+                 
+                      kpemb();
+       }
+</script>
 </body>
 </html>
